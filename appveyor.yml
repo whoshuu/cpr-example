@@ -7,6 +7,6 @@ before_build:
     - git submodule update --init --recursive
     - mkdir build
     - cd build
-    - cmake .. -G "Visual Studio 14 2015" -DBUILD_SHARED_LIBS=ON
+    - cmake .. -G "Visual Studio 14 2015"
 build:
     project: C:\projects\cpr-example\build\cpr-example.sln
