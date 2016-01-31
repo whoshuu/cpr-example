@@ -1,5 +1,9 @@
 set(JSON_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/json/src PARENT_SCOPE)
 
+if(WIN32)
+    option(CMAKE_USE_OPENSSL "Use OpenSSL code. Experimental" OFF)
+endif()
+
 set(BUILD_CPR_TESTS OFF CACHE BOOL "Don't build cpr tests")
 find_package(CURL)
 if(CURL_FOUND)
